@@ -1,10 +1,8 @@
 from flask import request, jsonify, Blueprint
-from flask_sqlalchemy import SQLAlchemy
-
 from models.participant import Participant
+from extensions import db
 
 participant_bp = Blueprint('participant_bp', __name__)
-db = SQLAlchemy()
 
 
 @participant_bp.route('/participant', methods=['POST'])
